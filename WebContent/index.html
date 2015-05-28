@@ -1,0 +1,22 @@
+<html ng-app>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="javascript/underscore-min.js"></script>
+	<script src="javascript/jquery-1.11.2.js"></script>
+	<script src="javascript/jquery-1.11.2.min.js"></script>
+    <script src="javascript/angular.min.js"></script>
+    <script src="javascript/stuff.js"></script>
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+  </head>
+  <body>
+    <div class="todo-wrapper" ng-controller="ListCtrl">
+      <h2>Games on {{getDate()}}</h2>
+      <form>
+        <input class="add-input" placeholder="Game Date (YYYY-MM-DD)" type="text" ng-model="ourDate" ng-model-instant height="30" />
+        <button class="add-btn" ng-click="findGames()" height="80"><h2>Look Up</h2></button>
+      </form>
+    <div id="fbtable"></div>
+    </div>
+  </body>
+</html>
